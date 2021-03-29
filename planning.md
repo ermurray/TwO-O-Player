@@ -5,7 +5,6 @@
 ## Classes
 
 - ### Game
-  - will instantiate new_game
   - Will contain the main game logic.
   - will keep track of the game turn
   - will ask the question

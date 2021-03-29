@@ -6,10 +6,17 @@ class Game
   @game_end = false
   end
 
+  def new_question
+    Question.new
+  end
+
   def game_loop
-    puts "The game has begun"
+    puts "Round: #{}"
+    asked_question = new_question
+    puts "Question #{asked_question.question}"
+    player_answer = gets.chomp.to_i
+    puts "That was: #{asked_question.check_answer(player_answer)}"
   #   until @game_end
-  #     puts "game still going"
   #     puts "ask question "
   #     player_answer = gets.chomp
   #     if player_answer == correct_answer
