@@ -18,11 +18,5 @@ new_game = Game.new(first_player, second_player)
 
 new_game.game_loop
 
-# new_question = Question.new
-
-# puts new_question.question
-
-# puts "the answer is #{new_question.answer}"
-
 
 

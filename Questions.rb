@@ -1,14 +1,25 @@
 class Question
-  @@question_number = 0
-  VALUE_ONE = rand(100)
-  VALUE_TWO = rand(50)
-  attr_reader :question
-  attr_reader :answer
-  attr_reader :question_number
+ 
+  attr_accessor :question
+  attr_accessor :answer
+  attr_accessor :question_number
+  attr_accessor :value1
+  attr_accessor :value2
   def initialize
-    @question = "What is the sum of #{VALUE_ONE} + #{VALUE_TWO}"
-    @answer = VALUE_ONE + VALUE_TWO
-    @@question_number += 1
+    @value1 = 0
+    @value2 = 0
+    @question = "What is the sum of #{@value1} + #{@value2}"
+    @answer = @value1 + @value2
+    @question_number = 0
+  end
+
+  def new_question
+    self.value1 = rand(20)
+    self.value2 = rand(20)
+    self.question_number += 1
+    self.question = "What is the sum of #{@value1} + #{@value2}"
+    self.answer = @value1 + @value2
+    
   end
 
   def check_answer(player_answer)
